@@ -19,6 +19,20 @@ El repositorio está organizado en secciones, cada una correspondiente a los lab
 - **seccion4:** Variables y expresiones
 - src: Archivo adicional del proyecto
 
+## Ejecución Proyecto:
+
++ Abrir CMD y Pegar:
+
+```bash
+git clone https://github.com/Mat30-cmyk/fundamentos_python.git
+```
+
++ luego ingresamos al repositorio:
+
+```bash
+cd fundamentos_python
+```
+
 ### Sección 1 – El Programa "¡Hola, Mundo!"
 
 ### Ejecución
@@ -83,6 +97,8 @@ Cada instrucción print() genera automáticamente un salto de línea al final, a
 
 ### Laboratorio: La función print() y sus argumentos
 
+- codigo:
+
 ```bash
 print("Mi nombre es", "Mateo")
 
@@ -102,6 +118,8 @@ print("Hola", "mundo", sep="-")
 **`Solución:`** Se utilizó sep="***" para cumplir con el formato entre palabras y end="..." para concatenar la salida del primer print con el segundo sin romper la línea.
 
 ### Laboratorio: La función print() y sus argumentos
+
+- codigo:
 
 ```bash
 print("Flecha de Salida Original")
