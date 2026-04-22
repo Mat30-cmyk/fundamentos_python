@@ -25,17 +25,17 @@ El repositorio está organizado en secciones, cada una correspondiente a los lab
 
 Para ejecutar los archivos, se utiliza Python desde la terminal:
 
-* Laboratorio: Trabajando con la función print()
+* **Laboratorio:** Trabajando con la función print()
 ```bash
 python seccion1/hola_mundo.py
 ```
 
-* Laboratorio: La función print() y sus argumentos
+* **Laboratorio:** La función print() y sus argumentos
 ```bash
 python seccion1/print_argumentos.py
 ```
 
-* Laboratorio: La función print() y sus argumentos
+* **Laboratorio:** La función print() y sus argumentos
 ```bash
 python seccion1/formato_salida.py  
 ```
@@ -155,6 +155,15 @@ print("  *****" * 2)
 
 ## Sección 2 – Literales de Python
 
+### Ejecución
+
+Para ejecutar los archivos, se utiliza Python desde la terminal:
+
+* **Laboratorio:** Literales de Python - Cadenas
+```bash
+python seccion2/literales.py
+```
+
 ### Laboratorio: Literales de Python - Cadenas
 * codigo:
 
@@ -249,6 +258,15 @@ En esta sección exploré cómo Python interpreta los datos según su formato:
 
 ## Sección 3 - Operadores - herramientas de manipulación de datos
 
+### Ejecución
+
+Para ejecutar los archivos, se utiliza Python desde la terminal:
+
+* Ejercicios de Operadores - Matematicos:
+```bash
+python seccion3/operadores_matematicos.py
+```
+
 ### Ejercicios de Operadores - Matematicos
 
 + codigo:
@@ -323,3 +341,274 @@ print("Nota: Los resultados con '.0' indican que el tipo de dato es FLOAT.")
 ```
 
 **Explicación:** esta explicación esta en el archivo `operadores.md`.
+
+## Sección 4 – Variables y Expresiones
+
+### Ejecución
+Para ejecutar los archivos, se utiliza Python desde la terminal:
+
++ **Laboratorio:** Convertidor de Millas a Kilómetros
+
+```Bash
+python seccion4/convertidor.py
+```
++ **Laboratorio:** Operadores y expresiones (Polinomio)
+
+```Bash
+python seccion4/expresiones.py
+```
+
++ **Laboratorio:** Ejercicios de Algoritmos (Gameplay)
+
+```Bash
+python seccion4/variables.py
+```
+
+### Laboratorio: Variables - Un convertidor simple
+
++ Codigo:
+
+```bash
+# Escenario: Convertidor de Millas a Kilómetros y viceversa
+
+# -- Variables de entrada
+kilometers = 12.25   # cantidad en kilómetros
+miles = 7.38         # cantidad en millas
+
+# -- Conversión de millas a kilómetros
+# Sabemos que: 1 milla = 1.61 kilómetros
+# Entonces multiplicamos las millas por 1.61
+miles_to_kilometers = miles * 1.61
+
+# -- Conversión de kilómetros a millas
+# Para convertir al revés, dividimos entre 1.61
+kilometers_to_miles = kilometers / 1.61
+
+# -- Mostrar resultados en pantalla
+# round(valor, 2) redondea el resultado a 2 decimales
+
+print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+# Ejemplo: 7.38 millas → 11.88 km
+
+print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+# Ejemplo: 12.25 km → 7.61 millas
+```
+
+#### Análisis:
+
+* **Variables como contenedores:** Se utilizaron nombres descriptivos (miles, kilometers) para almacenar valores numéricos.
+
+* **Función round():** Se implementó para limitar la salida a 2 decimales, mejorando la legibilidad del resultado final.
+
+### Laboratorio: Operadores y expresiones
+
++ Codigo:
+
+```bash
+# Escenario: Evaluar un polinomio para un valor de x dado
+
+# -- Variable de entrada
+#x = float(input("Ingrese valor de x: ")) Esta Linea de codigo es para facilitarlo y solo poner el numero que quiero en la misma terminal.
+x = -1  # Puedes cambiar este valor (ej: 0, 1, -1)
+
+# -- Convertimos a tipo flotante (decimal)
+# Esto asegura que el resultado tenga decimales si es necesario
+x = float(x)
+
+# -- Polinomio: 3x^3 - 2x^2 + 3x - 1
+# ** significa potencia
+# x**3 = x elevado a la 3
+# x**2 = x elevado a la 2
+
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
+
+# -- Mostrar resultado
+print("y =", y)
+```
+
+#### Lógica Aplicada:
+Para resolver el polinomio, se respetó la jerarquía de operadores:
+
+1. Exponenciación (``**``): Se eleva x a las potencias indicadas antes de multiplicar.
+
+2. Multiplicación (``*``): Se aplican los coeficientes (3, -2, 3).
+
+3. Suma/Resta: Se ejecutan al final de la expresión.
+
+### Laboratorio: Ejercicios de Algoritmos de Gameplay
+En este laboratorio final, desarrollé un sistema interactivo que permite al usuario elegir entre 16 cálculos diferentes basados en mecánicas de videojuegos.
+
++ Codigo:
+
+```bash
+# LAB - Ejercicios de Algoritmos 🎮
+
+# Este programa usa un menú interactivo que se repite indefinidamente
+# hasta que el usuario elija la opción 17 (Salir)
+
+while True:  # Bucle infinito para mostrar el menú siempre
+    print("\n===== MENU DE EJERCICIOS =====")
+    print("1. Puntaje total jugador")
+    print("2. Tiempo total en segundos")
+    print("3. Daño total")
+    print("4. Experiencia total")
+    print("5. Porcentaje de vida")
+    print("6. Oro total")
+    print("7. Velocidad promedio")
+    print("8. Costo total mejoras")
+    print("9. Tiempo restante misión")
+    print("10. Nivel promedio equipo")
+    print("11. Daño crítico")
+    print("12. Tiempo en horas y minutos")
+    print("13. Porcentaje misiones completadas")
+    print("14. Costo total tienda")
+    print("15. Tiempo promedio partidas")
+    print("16. Porcentaje enemigos derrotados")
+    print("17. Salir ❌")
+
+    # Se pide al usuario elegir una opción
+    opcion = int(input("Elige una opción: "))
+
+    # ================= OPCIÓN 1 =================
+    if opcion == 1:
+        # Se piden los puntos de 3 niveles
+        n1 = int(input("Nivel 1: "))
+        n2 = int(input("Nivel 2: "))
+        n3 = int(input("Nivel 3: "))
+        # Se suman todos los valores
+        print("Total:", n1 + n2 + n3)
+
+    # ================= OPCIÓN 2 =================
+    elif opcion == 2:
+        # Se ingresan horas, minutos y segundos
+        h = int(input("Horas: "))
+        m = int(input("Minutos: "))
+        s = int(input("Segundos: "))
+        # Conversión total a segundos
+        print("Total en segundos:", h*3600 + m*60 + s)
+
+    # ================= OPCIÓN 3 =================
+    elif opcion == 3:
+        # Daño de 3 ataques
+        a1 = int(input("Ataque 1: "))
+        a2 = int(input("Ataque 2: "))
+        a3 = int(input("Ataque 3: "))
+        print("Daño total:", a1 + a2 + a3)
+
+    # ================= OPCIÓN 4 =================
+    elif opcion == 4:
+        # Experiencia de 3 misiones
+        e1 = int(input("Misión 1: "))
+        e2 = int(input("Misión 2: "))
+        e3 = int(input("Misión 3: "))
+        print("Experiencia total:", e1 + e2 + e3)
+
+    # ================= OPCIÓN 5 =================
+    elif opcion == 5:
+        # Vida máxima y actual
+        max_vida = float(input("Vida máxima: "))
+        actual = float(input("Vida actual: "))
+        # Fórmula de porcentaje
+        print("Porcentaje:", (actual / max_vida) * 100, "%")
+
+    # ================= OPCIÓN 6 =================
+    elif opcion == 6:
+        # Oro recolectado en 3 misiones
+        o1 = int(input("Misión 1: "))
+        o2 = int(input("Misión 2: "))
+        o3 = int(input("Misión 3: "))
+        print("Oro total:", o1 + o2 + o3)
+
+    # ================= OPCIÓN 7 =================
+    elif opcion == 7:
+        # Velocidad = distancia / tiempo
+        d = float(input("Distancia: "))
+        t = float(input("Tiempo: "))
+        print("Velocidad promedio:", d / t)
+
+    # ================= OPCIÓN 8 =================
+    elif opcion == 8:
+        # Costos de mejoras
+        c1 = float(input("Mejora 1: "))
+        c2 = float(input("Mejora 2: "))
+        c3 = float(input("Mejora 3: "))
+        print("Costo total:", c1 + c2 + c3)
+
+    # ================= OPCIÓN 9 =================
+    elif opcion == 9:
+        # Tiempo restante = total - transcurrido
+        total = int(input("Tiempo total: "))
+        trans = int(input("Tiempo transcurrido: "))
+        print("Restante:", total - trans)
+
+    # ================= OPCIÓN 10 =================
+    elif opcion == 10:
+        # Promedio de niveles
+        n1 = int(input("Jugador 1: "))
+        n2 = int(input("Jugador 2: "))
+        n3 = int(input("Jugador 3: "))
+        print("Promedio:", (n1 + n2 + n3) / 3)
+
+    # ================= OPCIÓN 11 =================
+    elif opcion == 11:
+        # Daño crítico = daño base * multiplicador
+        base = float(input("Daño base: "))
+        multi = float(input("Multiplicador: "))
+        print("Daño crítico:", base * multi)
+
+    # ================= OPCIÓN 12 =================
+    elif opcion == 12:
+        # Convertir minutos a horas y minutos
+        minutos = int(input("Minutos: "))
+        print("Horas:", minutos // 60, "Minutos:", minutos % 60)
+
+    # ================= OPCIÓN 13 =================
+    elif opcion == 13:
+        # Porcentaje de misiones completadas
+        total = int(input("Total misiones: "))
+        comp = int(input("Completadas: "))
+        print("Porcentaje:", (comp / total) * 100, "%")
+
+    # ================= OPCIÓN 14 =================
+    elif opcion == 14:
+        # Suma de objetos comprados
+        o1 = float(input("Objeto 1: "))
+        o2 = float(input("Objeto 2: "))
+        o3 = float(input("Objeto 3: "))
+        print("Total:", o1 + o2 + o3)
+
+    # ================= OPCIÓN 15 =================
+    elif opcion == 15:
+        # Promedio de tiempo de partidas
+        t1 = float(input("Partida 1: "))
+        t2 = float(input("Partida 2: "))
+        t3 = float(input("Partida 3: "))
+        print("Promedio:", (t1 + t2 + t3) / 3)
+
+    # ================= OPCIÓN 16 =================
+    elif opcion == 16:
+        # Porcentaje de enemigos derrotados
+        total = int(input("Total enemigos: "))
+        der = int(input("Derrotados: "))
+        print("Porcentaje:", (der / total) * 100, "%")
+
+    # ================= OPCIÓN 17 =================
+    elif opcion == 17:
+        # Finaliza el programa
+        print("Saliendo... 🚪")
+        break  # Rompe el bucle while y termina
+
+    # ================= OPCIÓN INVÁLIDA =================
+    else:
+        # Si el usuario escribe algo fuera del rango
+        print("Opción inválida 💀")
+```
+
+### Análisis y Conclusiones de la Sección 4:
++ **Entrada de Datos (``input``):** Implementé la captura de datos desde el teclado, asegurando la conversión de tipos con int() y float() según la necesidad del cálculo (ej. puntos vs. porcentajes).
+
++ **Control de Flujo:** El uso de un bucle while y condicionales if-elif-else permite que el programa sea resiliente y funcional, gestionando incluso opciones inválidas ingresadas por el usuario.
+
++ **División Entera y Módulo:** En el ejercicio de conversión de tiempo (Opción 12), apliqué // para obtener las horas enteras y % para obtener los minutos sobrantes, demostrando la aplicación práctica de los operadores de la Sección 3.
+
++ **Nomenclatura:** Se mantuvo un esquema de nombres de variables conciso y funcional para facilitar la rapidez del desarrollo de los 16 algoritmos.
