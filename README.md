@@ -66,10 +66,12 @@ print("Hola,", "esto", "son", "varios", "argumentos", sep="-")
 ##### Análisis de Errores (Pruebas de Resiliencia):
 
 **`Sin comillas:`** Al ejecutar print(Hola Mundo) ¿Qué tipo de error arroja? R/ Python arroja un NameError.
+<img width="1434" height="110" alt="Captura de pantalla 2026-04-21 153558" src="https://github.com/user-attachments/assets/d0f3e419-adaa-4261-a292-4c5388fd6686" />
 
 **`Lógica:`** Python intenta interpretar "Hola" como una variable que no ha sido definida.
 
 **`Sin paréntesis:`** Al ejecutar print "¡Hola, Mundo!" ¿Qué tipo de error arroja esta vez? R/ Python arroja un SyntaxError.
+<img width="1436" height="114" alt="Captura de pantalla 2026-04-21 153625" src="https://github.com/user-attachments/assets/5673df4a-5471-452c-8bc7-9619f331bd93" />
 
 **`Lógica:`** En Python 3, print es una función y obligatoriamente requiere paréntesis para contener sus argumentos.
 
@@ -146,12 +148,16 @@ print("  *****" * 2)
 #### Análisis de errores (Lo que debes documentar)
 
 * **Mayúsculas en Print:** Al cambiarlo, Python arroja un NameError. Conclusión: Python es case-sensitive (distingue mayúsculas de minúsculas). print es la función correcta, Print no existe.
+<img width="1455" height="113" alt="Captura de pantalla 2026-04-21 222712" src="https://github.com/user-attachments/assets/7dc6a10a-e78f-4caf-a8ca-629ae34aa480" />
 
 * **Quitar comillas:** Python marca el error, pero a veces el cursor del error aparece un poco después de donde falta la comilla. Conclusión: El intérprete nota que algo anda mal cuando llega al final de la línea sin encontrar el cierre.
+<img width="1473" height="137" alt="Captura de pantalla 2026-04-21 222842" src="https://github.com/user-attachments/assets/79d4e9b0-e7af-47ef-905c-2112d38889a0" />
 
 * **Comillas vs Apóstrofes:** Python acepta ambos (" o '). Conclusión: Son equivalentes, pero si empiezas con una, debes cerrar con la misma.
+<img width="1420" height="745" alt="Captura de pantalla 2026-04-21 223102" src="https://github.com/user-attachments/assets/ad0b96d7-636c-408d-9c1e-432559233321" />
 
 * **Quitar paréntesis:** Produce un SyntaxError. Conclusión: En Python 3, los paréntesis son obligatorios porque print es una función, no una palabra clave como en versiones antiguas (Python 2).
+<img width="1463" height="134" alt="Captura de pantalla 2026-04-21 155930" src="https://github.com/user-attachments/assets/ae86e74e-a175-4d53-900c-eeee3ff8e906" />
 
 ## Sección 2 – Literales de Python
 
@@ -425,6 +431,9 @@ y = 3 * x**3 - 2 * x**2 + 3 * x - 1
 # -- Mostrar resultado
 print("y =", y)
 ```
+
+### Ejemplos con (1, 0, -1)
+<img width="1395" height="331" alt="Captura de pantalla 2026-04-21 223446" src="https://github.com/user-attachments/assets/8a7b350c-cb1a-436d-885c-3d0cffc8f33c" />
 
 #### Lógica Aplicada:
 Para resolver el polinomio, se respetó la jerarquía de operadores:
